@@ -34,10 +34,15 @@ PRODUCT_MANUFACTURER := ASUS
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Kernel inline build
-TARGET_KERNEL_SOURCE := kernel/asus/flo
-TARGET_KERNEL_CONFIG := flo_defconfig   
-TARGET_VARIANT_CONFIG := flo_defconfig
-TARGET_SELINUX_CONFIG := flo_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/flar2-flo
+TARGET_KERNEL_CONFIG := bulletproof_defconfig 
+TARGET_VARIANT_CONFIG := bulletproof_defconfig
+TARGET_SELINUX_CONFIG := bulletproof_defconfig
+# old Kernel inline build
+#TARGET_KERNEL_SOURCE := kernel/asus/flo
+#TARGET_KERNEL_CONFIG := flo_defconfig   
+#TARGET_VARIANT_CONFIG := flo_defconfig
+#TARGET_SELINUX_CONFIG := flo_defconfig
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/asus/deb/device.mk)
